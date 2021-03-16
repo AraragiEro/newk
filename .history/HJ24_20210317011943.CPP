@@ -40,8 +40,8 @@ int main()
             for (int j = 0; j < I.size(); j++)
             {
                 string bak1;
-                trainer<<*Iop;trainer>>bak1;trainer.clear();
-                if (I[j].find(bak1) != I[j].npos)
+                        trainer<<*Iop;trainer>>bak1;trainer.clear();
+                if (I[j].find(*Iop) != I[j].npos)
                 {
                     if (k == 0)
                     {

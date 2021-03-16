@@ -2,6 +2,8 @@
     "files.associations": {
         "xstring": "cpp",
         "limits": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "set": "cpp",
+        "unordered_map": "cpp"
     }
 }

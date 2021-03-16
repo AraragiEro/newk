@@ -11,10 +11,10 @@ int main()
     int INum = 0;
     while (cin >> INum){
     vector<string> I;
-    set<int> R;
+    set<string> R;
     vector<vector<string>> output;
-    unordered_map<int, int> map1;
-    stringstream trainer;
+    unordered_map<string, int> map1;
+    
         for (int i = 0; i < INum; i++)
         {
             string input;
@@ -25,12 +25,13 @@ int main()
         cin >> RNum;
         for (int i = 0; i < RNum; i++)
         {
-            int input;
+            string input;
             cin >> input;
             R.insert(input);
         }
 
         int mark1 = 0;
+        stringstream trainer;
         for (auto i = 0; i < R.size(); i++)
         {
             int k = 0;
@@ -39,17 +40,14 @@ int main()
                 Iop++;
             for (int j = 0; j < I.size(); j++)
             {
-                string bak1;
-                trainer<<*Iop;trainer>>bak1;trainer.clear();
-                if (I[j].find(bak1) != I[j].npos)
+                if (I[j].find(*Iop) != I[j].npos)
                 {
                     if (k == 0)
                     {
                         map1.insert(make_pair(*Iop, mark1));
                         mark1++;
                         vector<string> bak;
-                        
-                        bak.push_back(bak1);
+                        bak.push_back(*Iop);
                         output.push_back(bak);
                         k = 1;
                     }
@@ -75,11 +73,11 @@ int main()
             for (auto j = i->begin(); j != i->end(); j++)
             {
                 if (mark == 1)
-                cout << " " << ((i->size() - 1) / 2);
+                    cout << " " << ((i->size() - 1) / 2);
                 cout << " " << *j;
                 mark++;
             }
         }
-        cout<<endl;
+
     }
 }

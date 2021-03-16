@@ -41,7 +41,7 @@ int main()
             {
                 string bak1;
                 trainer<<*Iop;trainer>>bak1;trainer.clear();
-                if (I[j].find(bak1) != I[j].npos)
+                if (I[j].find(*Iop) != I[j].npos)
                 {
                     if (k == 0)
                     {

@@ -39,16 +39,15 @@ int main()
                 Iop++;
             for (int j = 0; j < I.size(); j++)
             {
-                string bak1;
-                trainer<<*Iop;trainer>>bak1;trainer.clear();
-                if (I[j].find(bak1) != I[j].npos)
+                if (I[j].find(*Iop) != I[j].npos)
                 {
                     if (k == 0)
                     {
                         map1.insert(make_pair(*Iop, mark1));
                         mark1++;
                         vector<string> bak;
-                        
+                        string bak1;
+                        trainer<<*Iop;trainer>>bak1;trainer.clear();
                         bak.push_back(bak1);
                         output.push_back(bak);
                         k = 1;
