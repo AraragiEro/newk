@@ -4,6 +4,7 @@
         "limits": "cpp",
         "vector": "cpp",
         "set": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "iostream": "cpp"
     }
 }
